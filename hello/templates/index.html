@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample HTML Page</title>
+    <link href="C:\Users\tpate\Downloads\bootstrap-5.3.2-dist\bootstrap-5.3.2-dist\css\bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      h1 {
+        color: blue;
+      }
+
+      p {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      {% if messages %} 
+      {% for message in messages%}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>{{ message }}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      {% endfor %}
+    {% endif %}
+    
+    </div>
+    
+    <h1>Welcome to My Website</h1>
+    <p>This is a sample HTML page.</p>
+
+    {% if user.is_authenticated %}
+      <a href="{% url 'logout'%}">logout</a>
+    {% else %}
+    <a href="{% url 'register'%}">register</a>
+
+      <a href="{% url 'login'%}">login</a>
+    {% endif %}
+  </body>
+</html>

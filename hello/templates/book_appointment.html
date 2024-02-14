@@ -1,0 +1,6 @@
+<!-- book_appointment.html -->
+<form method="post" action="{% url 'book_appointment' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Book Appointment</button>
+</form>

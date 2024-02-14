@@ -1,0 +1,8 @@
+from itertools import cycle
+import time
+
+colors = cycle(["red", "green", "blue", "yellow", "cyan", "magenta"])
+
+while True:
+    print(next(colors))
+    time.sleep(1)

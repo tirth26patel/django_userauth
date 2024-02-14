@@ -1,0 +1,51 @@
+{% load bootstrap-5 %}
+<html>
+<head>    
+<title>Register</title>
+</head>
+<body>
+
+{% if form.errors %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        there was an error with your form...
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+
+{% endif %}
+  <h1 class="p-3 me-3">Register</h1>
+  <div class="m-5">
+
+    <form method="POST" action="{% url 'register' %}" class="">
+      {% csrf_token %}
+
+      {{ form.as_p }}
+<br></br>
+<!-- <form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        {{ form.first_name }}
+    </div>
+    <div class="form-group">
+        {{ form.last_name }}
+    </div>
+    <div class="form-group">
+        {{ form.email }}
+    </div>
+    <div class="form-group">
+        {{ form.password1 }}
+    </div>
+    <div class="form-group">
+        {{ form.password2 }}
+    </div>
+    <button type="submit" class="btn btn-primary">Sign Up</button>
+</form> -->
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    
+    </form>
+  </div>
+  </div>
+</div>
+</body>
+</html>
