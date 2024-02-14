@@ -12,18 +12,3 @@ class RegisterUserForm(UserCreationForm):
         model = User
         fields = ('username','first_name','last_name','email','password1','password2','address')
 
-    # def __init__(self,*args,**kwargs):
-    #     super(RegisterUserForm,self).__init__(*args,**kwargs)
-
-    #     self.fields['username'].widget.attrs['class'] = 'form-control'
-    #     self.fields['password1'].widget.attrs['class'] = 'form-control'
-    #     self.fields['password2'].widget.attrs['class'] = 'form-control'
-        # widgets = {
-        #     'username': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Username'}),
-        #     'first_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'first_name'}),
-        #     'last_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'last_name'}),
-        #     'email': forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'email'}),
-        #     'password1': forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'password'}),
-        #     'password2': forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Confirm Password'}),
-        #     'address': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'address'}),
-        # }

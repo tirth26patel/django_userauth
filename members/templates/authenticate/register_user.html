@@ -1,7 +1,33 @@
-{% load bootstrap-5 %}
+
 <html>
 <head>    
 <title>Register</title>
+
+{% load static %}
+<!DOCTYPE html>
+<head>
+<title>Login</title>
+<body>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous" defer></script>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: blue;
+    }
+
+    p {
+      color: green;
+    }
+  </style>
+<div class="shadow pb-3 pt-4 mb-5 bg-body bg-body rounded text-black m-5 fPersian">
+
+{% block head %}
+{% endblock %}
+</head>
 </head>
 <body>
 
@@ -21,25 +47,6 @@
 
       {{ form.as_p }}
 <br></br>
-<!-- <form method="post">
-    {% csrf_token %}
-    <div class="form-group">
-        {{ form.first_name }}
-    </div>
-    <div class="form-group">
-        {{ form.last_name }}
-    </div>
-    <div class="form-group">
-        {{ form.email }}
-    </div>
-    <div class="form-group">
-        {{ form.password1 }}
-    </div>
-    <div class="form-group">
-        {{ form.password2 }}
-    </div>
-    <button type="submit" class="btn btn-primary">Sign Up</button>
-</form> -->
 
       <button type="submit" class="btn btn-primary">Submit</button>
     
